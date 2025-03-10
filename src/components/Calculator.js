@@ -31,6 +31,7 @@ export default function Calculator() {
     <div className="grid grid-cols-4 gap-2 flex-grow mt-4">
       {["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "=", "+"].map((btn) => (
         <button
+          data-testid="equals"
           key={btn}
           className="p-6 text-2xl bg-gray-600 rounded-lg hover:bg-gray-500"
           onClick={() => (btn === "=" ? handleCalculate() : handleClick(btn))}
@@ -48,6 +49,24 @@ export default function Calculator() {
   </div>
 </div>
 
-
   );
 }
+
+
+const users = [
+  {
+    name:"user1Admin",
+    pass:"pass123",
+    operations:["all"]
+  },
+  {
+    name:"user1",
+    pass:"pass123",
+    operations:["opp1, opp2"]
+  },
+  {
+    name:"user2",
+    pass:"pass12334",
+    operations:["opp1, opp3,"]
+  },
+]
